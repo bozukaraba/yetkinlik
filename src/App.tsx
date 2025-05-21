@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     async function checkConnection() {
       try {
-        const { data } = await supabase.from('test').select('*').limit(1);
+        const { data } = await supabase.from('cvs').select('*').limit(1);
         setIsConnected(true);
       } catch (error) {
         console.error('Database connection error:', error);
